@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  border: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 5% auto;
+  width: 600px;
+  height: 600px;
+  align-items: center;
+  /* background-color: rgba(225, 225, 237, 0.797); */
+}
+h1 {
+  display: flex;
+  align-items: center;
+  margin: 40px 0;
+  justify-content: center;
+  width: 100%;
+}
+nav {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  width: 80%;
+}
+nav a {
+  margin-bottom: 10px;
+  font-size: medium;
+  font-weight: bold;
+  font-size: large;
+  text-decoration: none;
+}
+
+form input {
+  border: 0.1rem solid #ccc;
+  border-radius: 0.3rem;
+  width: 15rem;
+  margin: 1rem 0;
+  user-focus: none;
+  padding: 0.6rem 2.8rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.06rem;
+  font-weight: 500;
+}
+form button {
+  padding: 0.8rem 2.8rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 2.4rem;
+  background-color: #68b984;
+  color: #fff;
+}
+.main-task li {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  width: 35rem;
+  min-height: 3rem;
+  border-bottom: 0.1rem solid #ccc;
+}
+
+.main-task li:first-child {
+  border-top: 0.1rem solid #ccc;
+}
+
+.main-task li:hover {
+  background-color: #fef2f2;
+}
+
+.main-task li input[type="checkbox"]:checked + p {
+  text-decoration: line-through;
+  color: #d14d72;
+}
+
+.main-task li button {
+  padding: 0.6rem 1rem;
+  width: 7rem;
+  background-color: #d14d72;
+  color: #fff9f9;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  justify-self: center;
+  letter-spacing: 0.1rem;
+}
+.active {
+  color: #68b984;
+  font-size: larger;
+  font-weight: bolder;
+}
