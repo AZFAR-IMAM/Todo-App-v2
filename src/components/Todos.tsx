@@ -1,5 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import { Todo, useTodos } from "../store/todos";
+import { MdDeleteOutline } from "react-icons/md";
 
 function Todos() {
   let { todos, toggelTodoAsCompleted, handelDeleteTodo } = useTodos();
@@ -26,10 +27,19 @@ function Todos() {
               onChange={() => toggelTodoAsCompleted(todo.id)}
             />
             {/* <label htmlFor={`todo-${todo.id}`}>{todo.task}</label> */}
-            <p>{todo.task}</p>
+            <p style={{ fontSize: "90" }}>{todo.task}</p>
             {todo.completed && (
-              <button type="button" onClick={() => handelDeleteTodo(todo.id)}>
+              <button
+                type="button"
+                onClick={() => handelDeleteTodo(todo.id)}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 Delete
+                <MdDeleteOutline size={18} />
               </button>
             )}
           </li>
