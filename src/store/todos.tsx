@@ -79,5 +79,8 @@ export const TodoProvider = ({ children }: TodosProviderProps) => {
 
 export const useTodos = () => {
   const todosConsumer = useContext(todosContext);
+  if (!todosConsumer) {
+    throw new Error("useTodos used outside of Provider");
+  }
   return todosConsumer;
 };
