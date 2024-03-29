@@ -1,4 +1,4 @@
-import { NavLink, useSearchParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   //   const [searchParams] = useSearchParams();
